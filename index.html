@@ -6,77 +6,130 @@
     <title>Gradient theme</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+	
+	<style>
+		html {
+			background: #cacffa;
+			background: -webkit-gradient(linear,left top,right top,from(#e9e4f0),to(#cacffa));
+			background: linear-gradient(90deg,#e9e4f0,#cacffa);
+		}
+		
+		#root {
+			background-color: #fff;
+			margin: 5rem;
+			box-shadow: 8px 8px 20px 0 rgba(106,53,255,.32);
+			border-radius: 35px;
+			border: 5px solid #363636;
+			animation-duration: 3s;
+			animation-name: slideDown;
+		}
+		
+		.navbar {
+			background: none;
+			margin-top: 2rem;
+			margin-left: 3rem;
+		}
+		
+		.navbar-brand {
+			margin-right: 5rem;
+		}
+		
+		.navbar-start .navbar-item {
+			margin-left: 1rem;
+			margin-right: 1rem;
+		}
+		
+		.column.is-background-image {
+			background: url(./bg.png);
+			background-position: center;
+			background-repeat: no-repeat;
+			margin: 12px;
+			border-top-right-radius: 30px;
+			border-bottom-right-radius: 30px;
+			background-size: cover;
+		}
+		
+		@keyframes slideDown {
+			from {
+				opacity: 0;
+				transform: translateY(-4rem);
+			}
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	</style>
   </head>
   <body>
 	
-	<div class="columns">
-	  <div class="column">
-		<nav class="navbar" role="navigation" aria-label="main navigation">
-		  <div class="navbar-brand">
-			<a class="navbar-item" href="https://bulma.io">
-			  Gradient
-			</a>
-
-			<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-			  <span aria-hidden="true"></span>
-			  <span aria-hidden="true"></span>
-			  <span aria-hidden="true"></span>
-			</a>
-		  </div>
-
-		  <div id="navbarBasicExample" class="navbar-menu">
-			<div class="navbar-start">
-			  <a class="navbar-item">
-				Home
-			  </a>
-
-			  <a class="navbar-item">
-				Collections
-			  </a>
-			  
-			  <a class="navbar-item">
-				Contact
-			  </a>
-			</div>
-		  </div>
-		</nav>
-		<section class="section is-medium">
-			<div class="container">
-			  <h1 class="title is-1 has-text-primary">
-				The Power of Gradien
-			  </h1>
-			  <h2 class="subtitle">
-				<strong class="has-text-danger">Make every style Colorful</strong>
-			  </h2>
-			  <p>
-				Color is a power which directly influences the soul. We build art work and unique gradient shades for your personal use.
-				We also provide helpful tutorials where you can learn to use gradient.
-			  </p>
-			  <p>
-				<button class="button is-primary is-rounded">Explore Now</button>
-			  </p>
-			  
-			  <div class="buttons">
-				<a class="button is-light button-social button-github" href="#" target="_blank" rel="noopener">
-					<i class="fab fa-facebook"></i>
+	<div id="root">
+		<div class="columns">
+		  <div class="column">
+			<nav class="navbar" role="navigation" aria-label="main navigation">
+			  <div class="navbar-brand">
+				<a class="navbar-item" href="#">
+				  Gradient
 				</a>
-				<a class="button is-light button-social button-twitter" href="#" target="_blank" rel="noopener">
-					<i class="fab fa-twitter"></i>
-				</a>
-				<a class="button is-light button-social button-linkedin" href="#" target="_blank" rel="noopener">
-					<i class="fab fa-linkedin"></i>
+
+				<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+				  <span aria-hidden="true"></span>
+				  <span aria-hidden="true"></span>
+				  <span aria-hidden="true"></span>
 				</a>
 			  </div>
-				
-			</div>
-		  </section>
-	  </div>
-	  
-	  <div class="column">
-		<figure class="image is-fullwidth">
-		  <img src="./bg.png">
-		</figure>
-	  </div>
+
+			  <div id="navbarBasicExample" class="navbar-menu">
+				<div class="navbar-start">
+				  <a class="navbar-item">
+					Home
+				  </a>
+
+				  <a class="navbar-item">
+					Collections
+				  </a>
+				  
+				  <a class="navbar-item">
+					Contact
+				  </a>
+				</div>
+			  </div>
+			</nav>
+			<section class="section is-medium">
+				<div class="container">
+				  <h1 class="title is-1 has-text-primary">
+					The Power of Gradien
+				  </h1>
+				  <h2 class="subtitle">
+					<strong class="has-text-danger">Make every style Colorful</strong>
+				  </h2>
+				  <p>
+					Color is a power which directly influences the soul. We build art work and unique gradient shades for your personal use.
+					We also provide helpful tutorials where you can learn to use gradient.
+				  </p>
+				  <p>
+					<button class="button is-primary is-rounded">Explore Now</button>
+				  </p>
+				  
+				  <div class="buttons">
+					<a class="button is-light button-social button-github" href="#" target="_blank" rel="noopener">
+						<i class="fab fa-facebook"></i>
+					</a>
+					<a class="button is-light button-social button-twitter" href="#" target="_blank" rel="noopener">
+						<i class="fab fa-twitter"></i>
+					</a>
+					<a class="button is-light button-social button-linkedin" href="#" target="_blank" rel="noopener">
+						<i class="fab fa-linkedin"></i>
+					</a>
+				  </div>
+					
+				</div>
+			  </section>
+		  </div>
+		  
+		  <div class="column is-background-image">
+		  </div>
+		</div>
 	</div>
 	
 	<script src="./main.js"></script>
